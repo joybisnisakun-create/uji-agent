@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uji Website Agent</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    .card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+    }
+    h1 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: #111;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+    button {
+      background-color: #0066cc;
+      color: #ffffff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      max-width: 240px;
+    }
+    button:hover {
+      background-color: #0052a3;
+    }
+    @media (min-width: 480px) {
+      button {
+        width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Uji Website Agent</h1>
+    <p>Halaman statis responsif satu file tanpa dependensi eksternal untuk pengujian agen.</p>
+    <button type="button" onclick="alert('Tombol berhasil diklik!')">Klik Saya</button>
+  </main>
+</body>
+</html>
