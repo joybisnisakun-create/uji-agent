@@ -1,5 +1,5 @@
 import unittest
-from hitung import bagi
+from hitung import bagi, kurang
 
 class TestHitung(unittest.TestCase):
     def test_bagi_normal(self):
@@ -11,6 +11,11 @@ class TestHitung(unittest.TestCase):
         with self.assertRaises(ValueError) as ctx:
             bagi(5, 0)
         self.assertEqual(str(ctx.exception), "pembagi nol")
+
+    def test_kurang(self):
+        self.assertEqual(kurang(10, 4), 6)
+        self.assertEqual(kurang(3, 7), -4)
+        self.assertEqual(kurang(0, 0), 0)
 
 if __name__ == "__main__":
     unittest.main()
