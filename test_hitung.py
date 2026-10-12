@@ -1,5 +1,5 @@
 import unittest
-from hitung import bagi, kurang, kali
+from hitung import bagi, kurang, kali, pangkat, bagi_bulat, modulo
 
 class TestHitung(unittest.TestCase):
     def test_bagi_normal(self):
@@ -21,6 +21,23 @@ class TestHitung(unittest.TestCase):
         self.assertEqual(kali(3,4),12)
         self.assertEqual(kali(-2,5),-10)
         self.assertEqual(kali(0,10),0)
+
+    def test_pangkat(self):
+        self.assertEqual(pangkat(2,3),8)
+        self.assertEqual(pangkat(5,0),1)
+        self.assertEqual(pangkat(-2,3),-8)
+
+    def test_bagi_bulat(self):
+        self.assertEqual(bagi_bulat(7,3),2)
+        self.assertEqual(bagi_bulat(-7,3),-3)
+        with self.assertRaises(ValueError):
+            bagi_bulat(5,0)
+
+    def test_modulo(self):
+        self.assertEqual(modulo(7,3),1)
+        self.assertEqual(modulo(-7,3),2)
+        with self.assertRaises(ValueError):
+            modulo(5,0)
 
 if __name__ == "__main__":
     unittest.main()
