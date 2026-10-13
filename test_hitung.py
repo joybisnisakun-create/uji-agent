@@ -1,5 +1,5 @@
 import unittest
-from hitung import bagi, kurang, kali, pangkat, bagi_bulat, modulo, faktorial
+from hitung import bagi, kurang, kali, pangkat, kuadrat, bagi_bulat, modulo, faktorial
 
 class TestHitung(unittest.TestCase):
     def test_bagi_normal(self):
@@ -21,6 +21,11 @@ class TestHitung(unittest.TestCase):
         self.assertEqual(kali(3,4),12)
         self.assertEqual(kali(-2,5),-10)
         self.assertEqual(kali(0,10),0)
+
+    def test_kuadrat(self):
+        self.assertEqual(kuadrat(5),25)
+        self.assertEqual(kuadrat(-3),9)
+        self.assertEqual(kuadrat(0),0)
 
     def test_pangkat(self):
         self.assertEqual(pangkat(2,3),8)

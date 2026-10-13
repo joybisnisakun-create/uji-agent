@@ -12,6 +12,9 @@ def kali(a, b):
 def pangkat(a, b):
     return a ** b
 
+def kuadrat(a):
+    return a * a
+
 def bagi_bulat(a, b):
     if b == 0:
         raise ValueError("pembagi nol")
