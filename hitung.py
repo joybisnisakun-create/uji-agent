@@ -25,6 +25,11 @@ def modulo(a, b):
         raise ValueError("pembagi nol")
     return a % b
 
+def rata_rata(daftar):
+    if not daftar:
+        raise ValueError("daftar kosong")
+    return sum(daftar) / len(daftar)
+
 def faktorial(n):
     if n < 0:
         raise ValueError("n negatif")

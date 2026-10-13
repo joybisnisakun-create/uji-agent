@@ -1,5 +1,5 @@
 import unittest
-from hitung import bagi, kurang, kali, pangkat, kuadrat, bagi_bulat, modulo, faktorial
+from hitung import bagi, kurang, kali, pangkat, kuadrat, bagi_bulat, modulo, rata_rata, faktorial
 
 class TestHitung(unittest.TestCase):
     def test_bagi_normal(self):
@@ -43,6 +43,13 @@ class TestHitung(unittest.TestCase):
         self.assertEqual(modulo(-7,3),2)
         with self.assertRaises(ValueError):
             modulo(5,0)
+
+    def test_rata_rata(self):
+        self.assertAlmostEqual(rata_rata([1, 2, 3, 4, 5]), 3.0)
+        self.assertAlmostEqual(rata_rata([10, 20]), 15.0)
+        self.assertAlmostEqual(rata_rata([2.5, 3.5]), 3.0)
+        with self.assertRaises(ValueError):
+            rata_rata([])
 
     def test_faktorial(self):
         self.assertEqual(faktorial(0), 1)
