@@ -1,5 +1,5 @@
 import unittest
-from hitung import bagi, kurang, kali, pangkat, bagi_bulat, modulo
+from hitung import bagi, kurang, kali, pangkat, bagi_bulat, modulo, faktorial
 
 class TestHitung(unittest.TestCase):
     def test_bagi_normal(self):
@@ -38,6 +38,14 @@ class TestHitung(unittest.TestCase):
         self.assertEqual(modulo(-7,3),2)
         with self.assertRaises(ValueError):
             modulo(5,0)
+
+    def test_faktorial(self):
+        self.assertEqual(faktorial(0), 1)
+        self.assertEqual(faktorial(1), 1)
+        self.assertEqual(faktorial(5), 120)
+        with self.assertRaises(ValueError) as ctx:
+            faktorial(-3)
+        self.assertEqual(str(ctx.exception), "n negatif")
 
 if __name__ == "__main__":
     unittest.main()
